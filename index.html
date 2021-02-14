@@ -97,7 +97,7 @@
               <ul>
                 <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 21</li>
                 <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> mbnuwantha90@gmail.com</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> www.madukanuwantha.github.io</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> www.madukanuwantha.live</li>
               </ul>
             </div>
           </div>
@@ -265,7 +265,8 @@
         <div class="icon-box" style="margin-bottom:20px; width: 100%;">
           <i><img src="/assets/img/SLIIT Logo.png" style="width: 50px;"></i>
           <h3>Sri Lanka Institute of Information Technology</h3>
-          <p><small style="line-height: 1;">BSc.(Hons) in Information Technology Specialized in Software Engineering</small></p>
+          <p><small style="line-height: 1;">BSc.(Hons) in Information Technology Specialized in Software
+              Engineering</small></p>
           <p><small>undergraduate</small></p>
           <p><small>2019 - 2022</small></p>
         </div>
@@ -604,41 +605,41 @@
         </div>
       </div>
 
-      <form name="contact-form" action="forms/contact.js" method="POST" role="form" class="email-form mt-4">
+      <form id="contact-form" name="contact-form" onsubmit="return sendMail()" method="POST" role="form"
+        class="email-form mt-4">
         <div class="form-row">
-
           <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4"
-              data-msg="Please enter at least 4 chars" />
+            <input type="text" name="name" class="form-control" id="form-name" placeholder="Your Name"
+              data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
             <div class="validate"></div>
           </div>
 
           <div class="col-md-6 form-group">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email"
-              data-msg="Please enter a valid email" />
+            <input type="email" class="form-control" name="email" id="form-email" placeholder="Your Email"
+              data-rule="email" data-msg="Please enter a valid email" />
             <div class="validate"></div>
           </div>
         </div>
 
         <div class="form-group">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4"
-            data-msg="Please enter at least 8 chars of subject" />
+          <input type="text" class="form-control" name="subject" id="form-subject" placeholder="Subject"
+            data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
           <div class="validate"></div>
         </div>
 
         <div class="form-group">
-          <textarea class="form-control" name="message" rows="5" data-rule="required"
+          <textarea class="form-control" name="message" id="form-message" rows="5" data-rule="required"
             data-msg="Please write something for us" placeholder="Message"></textarea>
           <div class="validate"></div>
         </div>
 
         <div class="mb-3">
-          <div class="loading">Loading</div>
+          <div class="loading"></div>
           <div class="error-message"></div>
-          <div class="sent-message">Your message has been sent. Thank you!</div>
+          <div class="sent-message"></div>
         </div>
 
-        <div class="text-center"><button type="submit">Send Message</button></div>
+        <div id="submit-btn" class="text-center"><button type="submit">Send Message</button></div>
       </form>
 
     </div>
@@ -648,7 +649,7 @@
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/email-form/validate.js"></script>
   <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
   <script src="assets/vendor/counterup/counterup.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
@@ -657,6 +658,25 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Email System Installation -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_MqiSkDP41UTZ5DFqODtan");
+    })();
+    function sendMail() {
+      emailjs.sendForm('gmail', 'template_pygj8ag', '#contact-form')
+        .then(function (response) {
+          console.log('Success');
+          document.getElementById("submit-btn").style.display = 'none';
+        }, function (error) {
+          console.log('Failed', error);
+          document.getElementById("submit-btn").style.display = 'none';
+        });
+    }
+  </script>
 
 </body>
 
