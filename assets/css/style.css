@@ -889,6 +889,19 @@ section .container {
   color: #fff;
 }
 
+.blog-img{
+  width: 500px;
+}
+
+@media (max-width: 400px) {
+  .blog-img {
+    width: 250px;
+  }
+  .blog .icon-box {
+    padding: 15px 15px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Project
 --------------------------------------------------------------*/
