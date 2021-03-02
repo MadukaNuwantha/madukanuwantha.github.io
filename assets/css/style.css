@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #040404;
@@ -43,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
 #header {
   transition: ease-in-out 0.3s;
   position: relative;
@@ -133,7 +135,9 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+
 /* Desktop Navigation */
+
 .nav-menu {
   margin-top: 35px;
 }
@@ -145,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
 }
 
-.nav-menu li + li {
+.nav-menu li+li {
   margin-left: 30px;
 }
 
@@ -171,17 +175,18 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+.nav-menu a:hover:before, .nav-menu li:hover>a:before, .nav-menu .active>a:before {
   visibility: visible;
   width: 25px;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.nav-menu a:hover, .nav-menu .active>a, .nav-menu li:hover>a {
   color: #fff;
   text-decoration: none;
 }
 
 /* Mobile Navigation */
+
 .mobile-nav-toggle {
   position: fixed;
   right: 15px;
@@ -233,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+.mobile-nav a:hover, .mobile-nav .active>a, .mobile-nav li:hover>a {
   color: #18d26e;
   text-decoration: none;
 }
@@ -265,6 +270,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Header Top */
+
 #header.header-top {
   height: 80px;
   position: fixed;
@@ -304,6 +310,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
+
 section {
   overflow: hidden;
   position: absolute;
@@ -382,6 +389,7 @@ section .container {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
 .about-me .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -410,6 +418,7 @@ section .container {
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
+
 .counts {
   padding: 70px 0 60px;
 }
@@ -451,6 +460,7 @@ section .container {
 /*--------------------------------------------------------------
 # CV
 --------------------------------------------------------------*/
+
 .cv .icon-box {
   display: flex;
   align-items: center;
@@ -481,6 +491,7 @@ section .container {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
+
 .skills .icon-box {
   display: flex;
   align-items: center;
@@ -511,6 +522,7 @@ section .container {
 /*--------------------------------------------------------------
 # Technology And Tools
 --------------------------------------------------------------*/
+
 .techtools .icon-box {
   display: flex;
   align-items: center;
@@ -538,10 +550,10 @@ section .container {
   background: rgba(255, 255, 255, 0.12);
 }
 
-
 /*--------------------------------------------------------------
 # Education
 --------------------------------------------------------------*/
+
 .education .icon-box {
   align-items: center;
   padding: 20px;
@@ -563,7 +575,7 @@ section .container {
   color: #fff;
 }
 
-.education .icon-box p{
+.education .icon-box p {
   line-height: 0.1;
 }
 
@@ -574,6 +586,7 @@ section .container {
 /*--------------------------------------------------------------
 # Achivement
 --------------------------------------------------------------*/
+
 .achivement .icon-box {
   align-items: center;
   padding: 20px;
@@ -595,7 +608,7 @@ section .container {
   color: #fff;
 }
 
-.achivement .icon-box p{
+.achivement .icon-box p {
   line-height: 0.1;
 }
 
@@ -603,10 +616,10 @@ section .container {
   background: rgba(255, 255, 255, 0.12);
 }
 
-
 /*--------------------------------------------------------------
 # Personal-Skills
 --------------------------------------------------------------*/
+
 .personal-skills .icon-box {
   align-items: center;
   padding: 20px;
@@ -628,7 +641,7 @@ section .container {
   color: #fff;
 }
 
-.personal-skills .icon-box p{
+.personal-skills .icon-box p {
   line-height: 0.1;
 }
 
@@ -639,6 +652,7 @@ section .container {
 /*--------------------------------------------------------------
 # Interests
 --------------------------------------------------------------*/
+
 .interests .icon-box {
   display: flex;
   align-items: center;
@@ -669,6 +683,7 @@ section .container {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
+
 .testimonials .testimonial-item {
   box-sizing: content-box;
   min-height: 320px;
@@ -752,6 +767,7 @@ section .container {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
@@ -813,6 +829,7 @@ section .container {
 /*--------------------------------------------------------------
 # Blog
 --------------------------------------------------------------*/
+
 .blog .icon-box {
   text-align: center;
   background: rgba(204, 204, 204, 0.1);
@@ -889,12 +906,12 @@ section .container {
   color: #fff;
 }
 
-.blog-img{
+.blog .blog-img {
   width: 500px;
 }
 
 @media (max-width: 400px) {
-  .blog-img {
+  .blog .blog-img {
     width: 250px;
   }
   .blog .icon-box {
@@ -905,6 +922,7 @@ section .container {
 /*--------------------------------------------------------------
 # Project
 --------------------------------------------------------------*/
+
 .project .project-item {
   margin-bottom: 30px;
 }
@@ -1059,10 +1077,10 @@ section .container {
   right: 15px;
 }
 
-
 /*--------------------------------------------------------------
 # Project Details
 --------------------------------------------------------------*/
+
 .project-details {
   padding-top: 40px;
   background: rgba(0, 0, 0, 0.8);
@@ -1119,7 +1137,7 @@ section .container {
   font-size: 15px;
 }
 
-.project-details .project-info ul li + li {
+.project-details .project-info ul li+li {
   margin-top: 10px;
 }
 
@@ -1137,6 +1155,7 @@ section .container {
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
+
 .gallery .gallery-item {
   margin-bottom: 30px;
 }
@@ -1294,6 +1313,7 @@ section .container {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
 .contact .info-box {
   color: #444444;
   padding: 20px;
@@ -1365,7 +1385,7 @@ section .container {
   font-weight: 600;
 }
 
-.contact .email-form .error-message br + br {
+.contact .email-form .error-message br+br {
   margin-top: 25px;
 }
 
@@ -1479,6 +1499,7 @@ section .container {
 /*--------------------------------------------------------------
 # Credits
 --------------------------------------------------------------*/
+
 .credits {
   position: fixed;
   right: 0;
@@ -1511,7 +1532,8 @@ section .container {
 /*--------------------------------------------------------------
 # Coming Soon
 --------------------------------------------------------------*/
-.coming-soon{
+
+.coming-soon {
   text-align: center;
   margin-top: 25%;
   margin-bottom: 30%;
